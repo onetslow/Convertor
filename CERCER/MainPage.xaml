@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:CERCER" 
+             x:Class="CERCER.MainPage" 
+             x:DataType="local:MainPage" 
+             Title="Жириновский одобряет">
+    <Grid>
+        <Image Source="rr.jpg" Aspect="AspectFill" Opacity="0.6"/>
+        <StackLayout Padding="20">
+            <Label Text="{Binding RateDateText}" FontSize="Large" 
+                   HorizontalOptions="Start" TextColor="Gold" 
+                   FontAttributes="Bold"/>
+
+            <StackLayout Orientation="Horizontal" Margin="0,50,210,0">
+                <Picker Title="Выберите валюту" 
+                        ItemsSource="{Binding Currencies}"  
+                        SelectedItem="{Binding SourceCurrency, Mode=TwoWay}" 
+                        BackgroundColor="Orange"/>
+                <Entry Text="{Binding SourceAmount, Mode=TwoWay}"  
+                       Keyboard="Numeric"  
+                       WidthRequest="100"  
+                       HorizontalOptions="EndAndExpand" 
+                       BackgroundColor="Orange"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,50,210,0">
+                <Picker Title="Выберите валюту"  
+                        ItemsSource="{Binding Currencies}"  
+                        SelectedItem="{Binding TargetCurrency, Mode=TwoWay}" 
+                        BackgroundColor="Orange"/>
+                <Entry Text="{Binding TargetAmount}"  
+                       IsReadOnly="True"  
+                       WidthRequest="100"  
+                       HorizontalOptions="EndAndExpand" 
+                       BackgroundColor="Orange"/>
+            </StackLayout>
+            <Label Text="$, $ - грязная бумажка!" 
+                FontSize="Header" 
+                HorizontalOptions="Center" 
+                TextColor="Khaki" 
+                FontAttributes="Italic"
+                Margin="0,100,0,0"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

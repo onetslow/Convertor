@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CERCER.Hello"
+             BackgroundColor="Black">
+    
+        <!-- Абсолютный слой для текста и картинок поверх фона -->
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <!-- Картинка в центре -->
+        <Image Source="rer.jpg"
+                   Aspect="AspectFit"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.3, 0.5, 0.3"
+                   AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional, HeightProportional" />
+
+        <!-- Текст надписи -->
+        <Label Text="Готовы?"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="White"
+                   FontSize="Header"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.7, AutoSize, AutoSize"
+                   AbsoluteLayout.LayoutFlags="PositionProportional" />
+    </AbsoluteLayout>
+</ContentPage>
