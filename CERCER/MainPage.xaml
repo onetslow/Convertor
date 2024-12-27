@@ -8,9 +8,15 @@
     <Grid>
         <Image Source="rr.jpg" Aspect="AspectFill" Opacity="0.6"/>
         <StackLayout Padding="20">
+            
             <Label Text="{Binding RateDateText}" FontSize="Large" 
                    HorizontalOptions="Start" TextColor="Gold" 
                    FontAttributes="Bold"/>
+
+            <StackLayout Orientation="Horizontal" Margin="0,50,0,0">
+                <Label Text="Дата:" VerticalOptions="Center" TextColor="White" />
+                <DatePicker Date="{Binding SelectedDate, Mode=TwoWay}" Format="d" HorizontalOptions="FillAndExpand" BackgroundColor="Orange"/>
+            </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,50,210,0">
                 <Picker Title="Выберите валюту" 
